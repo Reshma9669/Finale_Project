@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Motivation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: white;
+      color: #2575fc;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #2575fc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🌟 Daily Motivation 🌟</h1>
+    <p>
+      The purpose of this web application is to provide users with a quick dose 
+      of inspiration and positivity. Each time you click the button, a random 
+      motivational quote will appear, encouraging you to stay focused, confident, 
+      and motivated throughout your day. This simple app reminds us that even small 
+      words of encouragement can bring big changes to our mindset.
+    </p>
+    <p id="quote">Click the button to get inspired!</p>
+    <button onclick="newQuote()">Get Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "Every day is a new beginning.",
+      "Don’t stop until you’re proud.",
+      "Push yourself, because no one else is going to do it for you.",
+      "Difficult roads lead to beautiful destinations.",
+      "Your only limit is your mind."
+    ];
+
+    function newQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[random];
+    }
+  </script>
+</body>
+</html>
